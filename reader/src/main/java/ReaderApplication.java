@@ -5,9 +5,9 @@ import visual.VisualMain;
 public class ReaderApplication {
     public static void main(String[] args) {
         VisualMain.go();
-        if (args[0].equals(null) || args[1].equals(null)){
+        if (args.length == 0){
+			System.out.println("Ip and port default");
             ConfigNetwork.setUpNetworking("127.0.0.1", 5000);
-            System.out.println("Ip and port default");
         } else {
             ConfigNetwork.setUpNetworking(args[0], Integer.parseInt(args[1]));
         }

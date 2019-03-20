@@ -4,9 +4,9 @@ import visual.VisualMain;
 public class PublisherApplication {
     public static void main(String[] args) {
         VisualMain.go();
-        if (args[0].equals(null)) {
-            ConfigNetwork.startServer(5000);
+        if (args.length == 0) {
             System.out.println("Port default");
+            ConfigNetwork.startServer(5000);
         } else {
             ConfigNetwork.startServer(Integer.parseInt(args[0]));
         }
